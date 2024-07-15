@@ -8,19 +8,23 @@ endif
 let g:colors_name='ghdark'
 
 let g:github_colors = {
-  \ "base0"        : ["#0d1117", 233],
+  \ "base0"        : ["#25292E", 237],
   \ "base1"        : ["#161b22", 235],
   \ "base2"        : ["#21262d", 237],
   \ "base3"        : ["#89929b", 243],
   \ "base4"        : ["#c6cdd5", 249],
-  \ "base5"        : ["#ecf2f8", 252],
+  \ "base5"        : ["#ffffff", 231],
   \ "red"          : ["#fa7970", 210],
   \ "orange"       : ["#faa356", 178],
   \ "green"        : ["#7ce38b", 114],
   \ "lightblue"    : ["#a2d2fb", 153],
   \ "blue"         : ["#77bdfb", 75],
   \ "purp"         : ["#cea5fb", 183],
-  \ "none"         : ["NONE", "NONE"]
+  \ "none"         : ["NONE", "NONE"],
+  \ "gray07"       : ["#c0c0c0", 07],
+  \ "gray238"      : ["#444444", 238],
+  \ "base0Original"        : ["#0d1117", 233],
+  \ "base5Original"        : ["#ecf2f8", 252],
   \ }
 
 " if doesn't support termguicolors or < 256 colors exit
@@ -173,12 +177,14 @@ call s:ghhl("Pmenu", "base4", "base1")
 call s:ghhl("PmenuSel", "base4", "base2")
 call s:ghhl("Search", "base0", "base5")
 call s:ghhl("SignColumn", "none", "base0")
-call s:ghhl("StatusLine", "base5", "base2")
+" call s:ghhl("StatusLine", "base5", "base2")
+call s:ghhl("StatusLine", "gray07", "gray238")
 call s:ghhl("StatusLineNC", "base3", "base1")
 call s:ghhl("Todo", "base4", "base0")
 call s:ghhl("VertSplit", "base1", "base1")
 call s:ghhl("Visual", "none", "base0", "reverse")
 call s:ghhl("WarningMsg", "orange", "base1")
+call s:ghhl("ColorColumn", "none", "gray238")
 
 "########################################
 " links
@@ -373,11 +379,15 @@ hi! link helpVim Title
 
 " HTML
 
-hi! link htmlArg Special
-hi! link htmlLink Underlined
+" hi! link htmlArg Special. Original
+hi! link htmlArg GhPurp
+" hi! link htmlLink Underlined
+hi! link htmlLink GhBase5
 hi! link htmlSpecialTagName htmlTagName
 hi! link htmlTag Identifier
 hi! link htmlTagName GhGreen
+hi! link htmlTag GhBase5
+hi! link htmlEndTag GhBase5
 
 " java
 
@@ -646,5 +656,6 @@ hi! link tomlTable GhPurp
 hi! link jsonBoolean GhBlue
 hi! link jsonKeywordMatch GhBase4
 hi! link jsonString String
-hi! link jsonKeyword jsonString
+" hi! link jsonKeyword jsonString. Original
+hi! link jsonKeyword GhBlue
 hi! link jsonQuote jsonString
