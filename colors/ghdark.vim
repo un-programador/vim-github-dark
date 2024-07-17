@@ -13,7 +13,7 @@ let g:github_colors = {
   \ "base2"        : ["#21262d", 237],
   \ "base3"        : ["#89929b", 243],
   \ "base4"        : ["#c6cdd5", 249],
-  \ "base5"        : ["#ffffff", 231],
+  \ "base5"        : ["#ecf2f8", 231],
   \ "red"          : ["#fa7970", 210],
   \ "orange"       : ["#faa356", 178],
   \ "green"        : ["#7ce38b", 114],
@@ -42,11 +42,15 @@ if has('nvim')
     let g:terminal_color_1 = g:github_colors["red"][0]
     let g:terminal_color_9 = g:github_colors["red"][0]
 
-    let g:terminal_color_2 = g:github_colors["green"][0]
-    let g:terminal_color_10 = g:github_colors["green"][0]
+    " let g:terminal_color_2 = g:github_colors["green"][0] " Original
+    let g:terminal_color_2 = g:github_colors["lightblue"][0]
+    " let g:terminal_color_10 = g:github_colors["green"][0] " Original
+    let g:terminal_color_10 = g:github_colors["lightblue"][0]
 
-    let g:terminal_color_3 = g:github_colors["orange"][0]
-    let g:terminal_color_11 = g:github_colors["orange"][0]
+    " let g:terminal_color_3 = g:github_colors["orange"][0] " Original
+    let g:terminal_color_3 = g:github_colors["blue"][0]
+    " let g:terminal_color_11 = g:github_colors["orange"][0] " Original
+    let g:terminal_color_11 = g:github_colors["blue"][0]
 
     let g:terminal_color_4 = g:github_colors["blue"][0]
     let g:terminal_color_12 = g:github_colors["lightblue"][0]
