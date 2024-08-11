@@ -8,7 +8,7 @@ endif
 let g:colors_name='ghdark'
 
 let g:github_colors = {
-  \ "base0"        : ["#25292E", 237],
+  \ "base0"        : ["#25292E", 233],
   \ "base1"        : ["#161b22", 235],
   \ "base2"        : ["#21262d", 237],
   \ "base3"        : ["#89929b", 243],
