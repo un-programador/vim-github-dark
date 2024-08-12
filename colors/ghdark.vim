@@ -13,7 +13,7 @@ let g:github_colors = {
   \ "base2"        : ["#21262d", 237],
   \ "base3"        : ["#89929b", 243],
   \ "base4"        : ["#c6cdd5", 249],
-  \ "base5"        : ["#ecf2f8", 231],
+  \ "base5"        : ["#e1e4e8", 252],
   \ "red"          : ["#fa7970", 210],
   \ "orange"       : ["#faa356", 178],
   \ "green"        : ["#7ce38b", 114],
@@ -22,7 +22,7 @@ let g:github_colors = {
   \ "purp"         : ["#cea5fb", 183],
   \ "none"         : ["NONE", "NONE"],
   \ "gray07"       : ["#c0c0c0", 07],
-  \ "gray238"      : ["#444444", 238],
+  \ "someBlue"      : ["#2a2c37", 17],
   \ "base0Original"        : ["#0d1117", 233],
   \ "base5Original"        : ["#ecf2f8", 252],
   \ }
@@ -182,13 +182,13 @@ call s:ghhl("PmenuSel", "base4", "base2")
 call s:ghhl("Search", "base0", "base5")
 call s:ghhl("SignColumn", "none", "base0")
 " call s:ghhl("StatusLine", "base5", "base2")
-call s:ghhl("StatusLine", "gray07", "gray238")
+call s:ghhl("StatusLine", "gray07", "someBlue")
 call s:ghhl("StatusLineNC", "base3", "base1")
 call s:ghhl("Todo", "base4", "base0")
 call s:ghhl("VertSplit", "base1", "base1")
 call s:ghhl("Visual", "none", "base0", "reverse")
 call s:ghhl("WarningMsg", "orange", "base1")
-call s:ghhl("ColorColumn", "none", "gray238")
+call s:ghhl("ColorColumn", "none", "someBlue")
 
 "########################################
 " links
@@ -226,7 +226,8 @@ hi! link MsgArea Title
 hi! link Noise Delimiter
 hi! link NonText GhBase3
 hi! link NonText Ignore
-hi! link Number GhOrange
+" hi! link Number GhOrange
+hi! link Number GhBlue
 hi! link Operator GhBlue
 hi! link PreCondit PreProc
 hi! link PreProc GhBlue
@@ -254,7 +255,8 @@ hi! link TabLine StatusLineNC
 hi! link Tag Special
 hi! link Terminal Normal
 hi! link Title GhBase4
-hi! link Type GhRed
+" hi! link Type GhRed
+hi! link Type GhBlue
 
 " ALE
 
@@ -430,7 +432,8 @@ hi! link jsGlobalObjects Normal
 hi! link jsIfElseBraces jsFuncBraces
 hi! link jsNoise jsFuncBraces
 hi! link jsObjectBraces jsFuncBraces
-hi! link jsObjectKey jsObjectProp
+" hi! link jsObjectKey jsObjectProp
+hi! link jsObjectKey GhBase5
 hi! link jsObjectProp LocalIdent
 hi! link jsObjectSeparator jsFuncBraces
 hi! link jsOperatorKeyword jsStatement
@@ -443,6 +446,12 @@ hi! link jsBooleanTrue jsBooleanFalse
 hi! link jsRepeat Keyword
 hi! link jsArrowFunction GhBlue
 hi! link jsTernaryIfOperator jsDot
+hi! link jsDestructuringBlock GhOrange
+
+" jsx
+hi! link jsxTagName GhGreen
+hi! link jsxExpressionBlock GhOrange
+
 
 " markdown
 
@@ -555,9 +564,10 @@ hi! link swiftUserType LocalType
 " typescript
 
 hi! link typescriptArrayMethod LibraryFunc
-hi! link typescriptArrowFunc Operator
-hi! link typescriptAssign Operator
-hi! link typescriptBinaryOp Operator
+hi! link typescriptArrowFunc GhRed
+hi! link typescriptAssign GhRed
+hi! link typescriptBinaryOp GhRed
+hi! link typescriptUnion GhRed
 hi! link typescriptBOM LibraryType
 hi! link typescriptBOMWindowCons LibraryType
 hi! link typescriptBOMWindowMethod LibraryFunc
@@ -566,6 +576,7 @@ hi! link typescriptBraces Delimiter
 hi! link typescriptCall None
 hi! link typescriptClassHeritage Type
 hi! link typescriptClassName TypeDef
+" hi! link typescriptClassName GhPurp
 hi! link typescriptDOMDocMethod LibraryFunc
 hi! link typescriptDOMDocProp LibraryIdent
 hi! link typescriptDOMEventCons LibraryType
@@ -580,9 +591,13 @@ hi! link typescriptExport Keyword
 hi! link typescriptFuncName FunctionDef
 hi! link typescriptFuncTypeArrow typescriptArrowFunc
 hi! link typescriptGlobal typescriptPredefinedType
-hi! link typescriptIdentifier Keyword
+" hi! link typescriptIdentifier Keyword
+hi! link typescriptIdentifier GhBlue
+hi! link typescriptDestructureVariable Base5
 hi! link typescriptInterfaceName Typedef
-hi! link typescriptMember LocalFunc
+" hi! link typescriptMember LocalFunc
+" hi! link typescriptMember GhBase5
+hi! link typescriptMember GhPurp
 hi! link typescriptObjectLabel LocalIdent
 hi! link typescriptOperator Keyword
 hi! link typescriptParens Delimiter
@@ -591,7 +606,15 @@ hi! link typescriptTypeAnnotation Delimiter
 hi! link typescriptTypeReference typescriptUserDefinedType
 hi! link typescriptUserDefinedType LocalType
 hi! link typescriptVariableDeclaration IdentifierDef
+" hi! link typescriptVariableDeclaration GhBlue
 hi! link typescriptVariable Keyword
+hi! link typescriptdomformprop GhBase5
+hi! link typescriptbomwindowprop GhBase5
+hi! link typescriptdomstoragemethod GhPurp
+hi! link typescriptES6SetMethod GhPurp
+hi! link typescriptAmbientDeclaration GhRed
+hi! link typescriptFuncType Base5
+hi! link typescriptCacheMethod GhPurp
 
 " vim
 
@@ -663,3 +686,9 @@ hi! link jsonString String
 " hi! link jsonKeyword jsonString. Original
 hi! link jsonKeyword GhBlue
 hi! link jsonQuote jsonString
+
+" dart
+
+hi! link dartRepeat GhRed
+hi! link dartCoreType GhRed
+hi! link dartOperator GhRed
