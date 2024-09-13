@@ -355,6 +355,21 @@ hi! link diffNoEOL WarningMsg
 hi! link diffOnly WarningMsg
 hi! link diffRemoved DiffDelete
 
+" for vimdiff and `git merge tool` I want it to look different than the theme.
+" It look almost like the source code
+if &diff
+  hi! DiffText cterm=NONE ctermfg=NONE ctermbg=236 gui=none guifg=NONE guibg=#161b22
+  hi! DiffAdd cterm=NONE ctermfg=NONE ctermbg=238 gui=none guifg=NONE guibg=#2a2c37
+  hi! DiffDelete cterm=NONE ctermfg=01 ctermbg=238 gui=none guifg=#875f5f guibg=#2a2c37
+  hi! DiffChange cterm=NONE ctermfg=NONE ctermbg=238 gui=NONE guifg=NONE guibg=#2a2c37
+endif
+
+" gitgutter
+
+hi! link GitGutterAdd GhGreen
+hi! link GitGutterChange GhOrange
+hi! link GitGutterDelete GhRed
+
 " Git commit
 
 hi! link gitcommitHeader Todo
