@@ -699,7 +699,7 @@ hi! link jsonBoolean GhBlue
 hi! link jsonKeywordMatch GhBase4
 hi! link jsonString String
 " hi! link jsonKeyword jsonString. Original
-hi! link jsonKeyword GhBlue
+hi! link jsonKeyword GhGreen
 hi! link jsonQuote jsonString
 
 " dart
@@ -707,3 +707,18 @@ hi! link jsonQuote jsonString
 hi! link dartRepeat GhRed
 hi! link dartCoreType GhRed
 hi! link dartOperator GhRed
+
+" clojure
+hi! link clojureSymbol GhPurp
+hi! link clojureDefine GhRed
+hi! link clojureMacro GhRed
+
+" elixir
+hi! link elixirModuleDefine GhRed
+hi! link elixirModuleDeclaration GhOrange
+hi! link elixirAlias GhOrange
+hi! link elixirBlockDefinition GhRed
+hi! link elixirDefine GhRed
+hi! link elixirOperator GhLightBlue
+hi! link elixirKeyword GhRed
+hi! link elixirStringDelimiter GhLightBlue
