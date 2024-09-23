@@ -709,11 +709,13 @@ hi! link dartCoreType GhRed
 hi! link dartOperator GhRed
 
 " clojure
+
 hi! link clojureSymbol GhPurp
 hi! link clojureDefine GhRed
 hi! link clojureMacro GhRed
 
 " elixir
+
 hi! link elixirModuleDefine GhRed
 hi! link elixirModuleDeclaration GhOrange
 hi! link elixirAlias GhOrange
@@ -722,3 +724,10 @@ hi! link elixirDefine GhRed
 hi! link elixirOperator GhLightBlue
 hi! link elixirKeyword GhRed
 hi! link elixirStringDelimiter GhLightBlue
+
+" postgresql
+
+" somehow the postgresql command \dt and \l is not shown.
+" Or probably has the same color. This fixes it:
+hi! link sqlPsqlCommand GhRed
+hi! link sqlIsPsql GhRed
